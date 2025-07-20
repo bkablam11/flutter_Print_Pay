@@ -44,6 +44,17 @@ Remplacez `nom_de_votre_projet` par le nom que vous souhaitez donner à votre ap
 1.  Téléchargez le fichier `google-services.json` fourni par Firebase.
 2.  Placez ce fichier dans le répertoire `android/app/` de votre projet Flutter.
 
+#### e. Sécuriser les clés d'API
+
+**Important :** Le fichier `google-services.json` contient des informations sensibles. Pour des raisons de sécurité, il ne doit jamais être inclus dans le contrôle de version (Git).
+
+1.  Ouvrez le fichier `.gitignore` à la racine de votre projet.
+2.  Ajoutez la ligne suivante à la fin du fichier pour vous assurer que `google-services.json` est bien ignoré :
+
+    ```
+    /android/app/google-services.json
+    ```
+
 #### d. Ajouter les dépendances Firebase à Flutter
 Ouvrez le fichier `pubspec.yaml` et ajoutez les dépendances Firebase nécessaires. Pour ce projet, nous avons utilisé :
 ```yaml
